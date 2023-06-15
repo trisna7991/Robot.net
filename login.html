@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mikrotik > Login</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .backend_form {
+            display: none;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    $(if chap-id)
+    <form class="backend_form" name="sendin" action="$(link-login-only)" method="post">
+        <input type="text" name="username" />
+        <input type="text" name="password" />
+        <input type="text" name="dst" value="$(link-orig)" />
+        <input type="text" name="popup" value="true" />
+    </form>
+
+    <script src="/md5.js"></script>
+    <script>
+        function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+        }
+
+    </script>
+    $(endif)
+    
+    <div class="wrapper_login">
+        <!-- form login -->
+        <div class="wrapper_form">
+
+            <span class="title_form"><h2>Rob<img src="img/robot.png" alt="">t.net</h2></span>
+            <!-- <div class="sentence"></div> -->
+
+            <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                <div class="wrapper_input">
+                    <input type="hidden" name="dst" value="$(link-orig)" />
+                    <input type="hidden" name="popup" value="true" />
+
+                    <span class="group_input">
+                        <label for="username"><img src="img/user.png" alt=""></label>
+                        <input id="username" name="username" type="text" value="$(username)" 
+                        placeholder="Username" />
+                        <!-- <input id="username" name="username" type="text" value="admin" 
+                        placeholder="Username" /> -->
+                    </span>
+
+                    <span class="group_input">
+                        <label for="password"><img src="img/padlock.png" alt=""></label>
+                        <input id="password" name="password" type="password" placeholder="Password" />
+                    </span>
+
+                    <div class="btn">
+                        <button type="submit"><img src="img/next.png" alt="">.</button>
+                    </div>
+
+                    <!-- <span class="line"><div class="sign">oR</div></span> -->
+
+                </div>
+            </form>
+
+
+        </div>
+        <!-- end form login -->
+
+        
+
+        <!-- wrapper thumb / img -->
+        <!-- <div class="wrapper_thumb">
+            <div class="thumb">
+                
+            </div>
+        </div> -->
+        <!-- end wrapper thumb / img -->
+    </div>
+
+    <!-- footer -->
+    <div class="copyright"><p>Copyright&copy 2014 Robot | trisna | <a href="https://github.com/trisna7991">Github</a> </p></div>
+    <!-- end footer -->
+
+<!-- javascript -->
+<script src="js/main.js"></script>
+</body>
+</html>

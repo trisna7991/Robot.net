@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikrotik > Status</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+    
+<body $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif)>
+
+        <table>
+    
+        <tr>
+        <td>
+        <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+    
+            <!--    not mandatory      -->
+            <table>
+            $(if login-by == 'trial')
+                <br><div>Welcome trial user!</div><br>
+            $(elif login-by != 'mac')
+                <br><div>Welcome $(username)!</div><br>
+            $(endif)
+                <tr><td>IP address:</td><td>$(ip)</td></tr>
+                <tr><td>bytes up/down:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+            $(if session-time-left)
+                <tr><td>connected / left:</td><td>$(uptime) / $(session-time-left)</td></tr>
+            $(else)
+                <tr><td>connected:</td><td>$(uptime)</td></tr>
+            $(endif)
+            $(if blocked == 'yes')
+                <tr><td>status:</td><td><div>
+            <a href="$(link-advert)" target="hotspot_advert">advertisement</a> required</div></td>
+            $(elif refresh-timeout)
+                <tr><td>status refresh:</td><td>$(refresh-timeout)</td>
+            $(endif)
+    
+            </table>
+            <!--     end not mandatory     -->
+    
+    
+            $(if login-by-mac != 'yes')
+            <br>
+            <!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
+            <button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
+            end of user manager link -->
+            <input type="submit" value="log off">
+            $(endif)
+        </form>
+    
+        </td>
+        </table>
+
+<!-- js -->
+<script src="js/main.js"></script>
+</body>
+</html>
