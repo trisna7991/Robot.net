@@ -196,7 +196,19 @@ a {
 }
 
 
-
+/* opening speech */
+.opening_speech {
+    /* border: 1px solid red; */
+    margin-top: 35px;
+}
+.opening_speech p {
+    background-color: rgba(47, 255, 189, 0.566);
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-style: italic;
+}
 
 
 
