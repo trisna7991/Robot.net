@@ -202,14 +202,47 @@ a {
     margin-top: 35px;
 }
 .opening_speech p {
-    background-color: rgba(47, 255, 189, 0.566);
-    padding: 10px;
+    background-color: rgba(188, 194, 192, 0.152);
+    padding: 17px;
     font-family: monospace;
     font-size: 14px;
     letter-spacing: 2px;
+    border-radius: 6px;
     font-style: italic;
 }
 
+/* information */
+.information {
+    /* border: 1px solid red; */
+    /* margin-top: 40px; */
+    /* background-color: rgba(220, 220, 220, 0.555); */
+    padding: 4px;
+    border-radius: 4px;
+    position: fixed;
+    /* bottom: 50px; */
+    /* right: 0; */
+    left: 10px;
+    top: 0;
+}
+.information p {
+    display: flex;
+    position: relative;
+}
+.information p img {
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+}
+.information p span {
+    display: inline-block;
+    font-family: monospace;
+    letter-spacing: 1px;
+    color: rgb(107, 106, 106);
+    font-size: 12px;
+    font-style: italic;
+}
 
 
 
@@ -243,5 +276,29 @@ a {
     }
     .wrapper_login .wrapper_form .title_form h2 img {
         border: 2px solid white;
+    }
+
+    /* opening speech  */
+    .opening_speech {
+        padding: 10px;
+    }
+
+    /* information */
+    .information p img {
+        width: 19px;
+        height: 19px;
+        margin-right: 10px;
+        position: relative;
+        top: 2px;
+        background-color: white;
+        padding: 2px;
+    }
+    .information p span {
+        display: inline-block;
+        font-family: monospace;
+        letter-spacing: 1px;
+        color: rgb(247, 245, 245);
+        font-size: 12px;
+        font-style: italic;
     }
   }
