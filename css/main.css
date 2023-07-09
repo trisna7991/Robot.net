@@ -371,12 +371,12 @@ a {
 
     /* board */
     .wrapper_data {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         display: block;
     }
     .wrapper_data .wrapper_board {
         display: block;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 100%;
         text-align: center;
     }
