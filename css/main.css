@@ -343,11 +343,13 @@ a {
     /* opening speech  */
     .opening_speech {
         padding: 10px;
+        /* border: 1px solid red; */
     }
 
     /* information */
     .information {
         margin-top: 10px;
+        /* border: 1px solid red; */
     }
     .information p img {
         width: 19px;
@@ -368,10 +370,19 @@ a {
     }
 
     /* board */
+    .wrapper_data {
+        border: 1px solid red;
+        display: block;
+    }
     .wrapper_data .wrapper_board {
         display: block;
+        border: 1px solid red;
+        width: 100%;
+        text-align: center;
     }
     .wrapper_data .wrapper_board .board {
         margin-bottom: 50px;
+        margin: auto;
+        width: 90%;
     }
   }
