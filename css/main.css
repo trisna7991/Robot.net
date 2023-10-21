@@ -15,6 +15,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-image: url("../img/20231019_165533.jpg");
+    background-position-y: -400px;
 }
 
 a {
@@ -76,7 +78,7 @@ a {
 .wrapper_login .wrapper_form .sentence {
     margin-top: 12px;
     /* border: 1px solid red; */
-    color: gray;
+    color: rgb(251, 247, 247);
     font-size: 14px;
     letter-spacing: 1px;
 }
@@ -102,6 +104,7 @@ a {
     border: 1px solid rgba(220, 220, 220, 0.234);
     cursor: pointer;
     padding: 8px;
+    background-color: white;
 }
 .wrapper_login .wrapper_form .wrapper_input .group_input label img {
     width: 20px;
@@ -115,6 +118,7 @@ a {
     border: none;
     outline: none;
     background-color: rgba(220, 220, 220, 0.126);
+    background-color: white;
     letter-spacing: 1px;
     padding: 10px 10px;
     /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
@@ -321,6 +325,10 @@ a {
 /* RESPONSIVE */
 @media only screen and (max-width: 1200px) {
     
+    body {
+        background-size: cover;
+        background-position-y: 0px;
+    }
     .wrapper_login {
         margin: 0;
         display: block;
@@ -336,13 +344,15 @@ a {
         /* border: 1px solid rgb(255, 255, 255); */
         position: relative;
         top: -40px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.214);
+        /* background: transparent; */
         border-radius: 6px;
         /* width: 94%; */
+        padding: 10px;
     }
 
     .wrapper_login .wrapper_form .title_form {
-        background-color: rgba(19, 17, 17, 0.946);
+        background-color: rgba(1, 22, 15, 0.564);
         color: white;
         padding: 10px 0;
     }
