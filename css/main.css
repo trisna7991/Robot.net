@@ -15,8 +15,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image: url("../img/20231019_165533.jpg");
-    background-position-y: -400px;
+    /* background-image: url("../img/20231019_165533.jpg"); */
+    /* background-position-y: -400px; */
 }
 
 a {
@@ -29,21 +29,23 @@ a {
     width: 20%;
     margin: auto;
     margin-top: 50px;
+    padding-bottom: 10px;
 
     /* display: flex; */
     /* background-color: rgba(245, 245, 245, 0.365); */
 
     position: relative;
-    /* border-top: 1px solid rgba(0, 0, 0, 0.784); */
+    /* border: 1px solid rgba(0, 0, 0, 0.784); */
     /* border-bottom: 2px solid black; */
     /* border: 1px solid gainsboro; */
+    background-color: whitesmoke;
 }
 
 /* form */
 .wrapper_login .wrapper_form {
     /* border: 1px solid blue; */
     flex: 1;
-    padding: 14px;
+    /* padding: 14px; */
 }
 .wrapper_login .wrapper_form .title_form {
     /* display: flex; */
@@ -52,16 +54,22 @@ a {
     margin: 0;
     /* border: 1px solid red; */
     display: block;
-    font-size: 36px;
+    font-size: 26px;
     font-style: italic;
     /* font-weight: lighter !important; */
     font-weight: lighter;
+    /* text-align: left; */
+    padding-left: 10px;
+    padding-top: 10px;
 }
 .wrapper_login .wrapper_form .title_form h2 {
     font-weight: lighter;
     /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     font-family: 'Times New Roman', Times, serif;
     position: relative;
+    letter-spacing: 2px;
+    /* border: 1px solid red; */
+    margin: 0;
 }
 .wrapper_login .wrapper_form .title_form h2 img {
     border: 3px solid rgba(13, 13, 13, 0.979);
@@ -343,7 +351,7 @@ a {
     .wrapper_login .wrapper_form .wrapper_input {
         /* border: 1px solid rgb(255, 255, 255); */
         position: relative;
-        top: -40px;
+        /* top: -40px; */
         background-color: rgba(255, 255, 255, 0.214);
         /* background: transparent; */
         border-radius: 6px;
@@ -352,12 +360,14 @@ a {
     }
 
     .wrapper_login .wrapper_form .title_form {
-        background-color: rgba(12, 12, 12, 0.564);
-        color: white;
+        /* background-color: rgba(12, 12, 12, 0.564); */
+        /* color: white; */
         padding: 10px 0;
+        padding-top: 16px;
+        /* border: 1px solid red; */
     }
     .wrapper_login .wrapper_form .title_form h2 img {
-        border: 2px solid white;
+        /* border: 2px solid white; */
     }
 
     /* opening speech  */
