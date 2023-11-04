@@ -30,7 +30,7 @@ a {
     margin: auto;
     margin-top: 50px;
     padding-bottom: 10px;
-
+    display: none;
     /* display: flex; */
     /* background-color: rgba(245, 245, 245, 0.365); */
 
